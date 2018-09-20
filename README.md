@@ -25,7 +25,7 @@ Explore the api to understand which service suits you best.
 * You are free to use any tool / library of your desire.
 * We encourage you using [create react app](https://github.com/facebook/create-react-app?files=1).
 
-Before you start:
+#### Before you start:
 * Create a branch with your name from the `master` branch
 * Request for an `apikey` to work with [Climacell Api](https://developer.climacell.co/docs)
 
