@@ -23,7 +23,7 @@ Explore the api to understand which service suits you best.
 #### Guidelines:
 * Pay attention to SW design and clean code.
 * You are free to use any tool / library of your desire.
-* We encourage you using [create react app](https://github.com/facebook/create-react-app?files=1).
+* We encourage using [create react app](https://github.com/facebook/create-react-app?files=1).
 
 #### Before you start:
 * Create a branch with your name from the `master` branch
