@@ -18,10 +18,10 @@ Explore the api to understand which service suits you best.
 #### Required solution:
 * Create a react app that uses [Climacell Api](https://developer.climacell.co/docs) to get the weather data to decide when a hat might fly off your head.
 * Display a graph that shows the weather parameter you are using over time with an indication of when would the hat fly.
-* Deploy your solution to a static web hosting service of your choice (such as `Heroku`, `Github`, `AWS S3`, `Netlify` etc..) so it is publicly available.
+* Deploy your solution to a static web hosting service of your choice (such as: `Heroku`, `Github`, `AWS S3`, `Netlify` etc..) so it is publicly available.
 
 #### Guidelines:
-* Pay attention to SW design and clean code.
+* Pay attention to SW design and clean code (We are believers of the [SOLID](https://en.wikipedia.org/wiki/SOLID) SW design principals).
 * You are free to use any tool / library of your desire.
 * We encourage using [create react app](https://github.com/facebook/create-react-app?files=1).
 
@@ -30,6 +30,5 @@ Explore the api to understand which service suits you best.
 * Request for an `apikey` to work with [Climacell Api](https://developer.climacell.co/docs)
 
 
-
-Don't hesitate to contact on any question.
+Don't hesitate to contact with any question.
 #### Good Luck!!!
