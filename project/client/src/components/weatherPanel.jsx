@@ -34,8 +34,8 @@ class WeatherPanel extends Component {
 
     onSubmit = data => {
         historicalRequest(
-            data.longitude,
-            data.latitude,
+            parseFloat( data.longitude ),
+            parseFloat( data.latitude ),
             "2018-03-19T00:00:00Z",
             "2018-03-19T24:00:00Z",
             10,
