@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import CoordinatesForm from './coordinatesForm'
 import GoogleChart from './googleChart'
+import { historicalRequest } from '../functions/api/requests.js'
+import { rawToChart } from '../functions/dataPasers.js'
+
 
 class WeatherPanel extends Component {
+    constructor(props){
+        super(props)
+
+        this.callback = this.callback.bind(this);
+    }
+
     state = { 
         chartWidth: '500px',
         chartHeight: '500px',
 
         chartType: 'LineChart',
-        chartData:[
-            ["Year", "Sales", "Expenses"],
-            ["2004", 1000, 400],
-            ["2005", 1170, 460],
-            ["2006", 660, 1120],
-            ["2007", 1030, 540]
+        chartData: [
+            ['Time', 'Temperature', 'Wind Speed', 'Humidity'],
+            ['0', 0, 0, 0]
         ],
         chartOptions:{
             title: "Weather",
@@ -21,9 +27,20 @@ class WeatherPanel extends Component {
             legend: { position: "bottom" }
         }
      };
+    
+    callback = (err, body) => {
+        this.setState({ chartData: rawToChart(body) });
+    };
 
     onSubmit = data => {
-
+        historicalRequest(
+            data.longitude,
+            data.latitude,
+            "2018-03-19T00:00:00Z",
+            "2018-03-19T24:00:00Z",
+            10,
+            this.callback
+        );
     };
 
     render() { 

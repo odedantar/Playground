@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
+
 class CoordinatesForm extends Component {
     state = { 
-        longitude: 0,
-        latitude: 0
+        longitude: -71.301998792,
+        latitude: 44.268832258
      };
 
      change = e => {
@@ -20,6 +21,7 @@ class CoordinatesForm extends Component {
     render() { 
         return ( 
             <div>
+                <h3>Coordiantes</h3>
                 <form>
                     <input 
                         name="longitude" 

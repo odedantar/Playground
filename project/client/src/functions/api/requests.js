@@ -8,9 +8,33 @@ const jsonHeaders = {
     'apikey': 'S984VQLZqIKmB7bCS6YFaV9sRUBAtYY7'
 };
 
-const histReqMetadata ={
+const historicalTemplate ={
     url: 'http://api2.climacell.co/v2/historical',
-    method: 'POST'
+    method: 'POST',
+    json: {
+        geocode: {
+          lon: -71.301998792,
+          lat: 44.268832258
+        },
+        location_id: "",
+        start_time: "2018-03-19T10:00:00Z",
+        end_time: "2018-03-19T11:00:00Z",
+        timestep: 60,
+        fields: [
+          {
+            name: "temp",
+            units: "F"
+          },
+          {
+            name: "wind_speed",
+            units: "knots"
+          },
+          {
+            name: "humidity",
+            units: "%"
+          }
+        ]
+      }
 };
 
 
@@ -33,12 +57,18 @@ const jsonRequest = (url, method, body, callback) => {
 
 };
 
-const historicalRequest = (body, callback) => {
+const historicalRequest = (longitude, latitude, start, end, steps, callback) => {
     
+    historicalTemplate.json.geocode.lon = longitude;
+    historicalTemplate.json.geocode.lat = latitude;
+    historicalTemplate.json.start_time = start;
+    historicalTemplate.json.end_time = end;
+    historicalTemplate.json.timestep = steps;
+
     jsonRequest(
-        histReqMetadata.url, 
-        histReqMetadata.method, 
-        body, 
+        historicalTemplate.url, 
+        historicalTemplate.method, 
+        historicalTemplate.json, 
         callback
     );
 
