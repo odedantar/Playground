@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { sendRequest } from './functions/weather.js'
-import CoordinatesForm from './components/coordinatesForm.jsx'
+import WeatherPanel from './components/weatherPanel.jsx'
 
 class App extends Component {
+
+  state = {};
+
   render() {
     return (
-        <CoordinatesForm/>
+        <WeatherPanel />
     );
   }
 }

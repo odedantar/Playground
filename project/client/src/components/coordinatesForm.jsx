@@ -14,7 +14,7 @@ class CoordinatesForm extends Component {
 
      onSubmit = e => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.onSubmit(this.state);
      };
 
     render() { 
