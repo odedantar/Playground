@@ -2,28 +2,23 @@ import React, { Component } from 'react';
 import { Chart } from 'react-google-charts';
 
 class GoogleChart extends Component {
+    
     state = {
-        options:{
-            title: "Weather",
-            curveType: "line",
-            legend: { position: "bottom" }
-        },
-        data:[
-            ["Year", "Sales", "Expenses"],
-            ["2004", 1000, 400],
-            ["2005", 1170, 460],
-            ["2006", 660, 1120],
-            ["2007", 1030, 540]
-          ]
+        width: this.props.width,
+        height: this.props.height,
+
+        type: this.props.type,
+        data: this.props.data,
+        options: this.props.options
     };
 
     render() { 
         return ( 
             <div>
                 <Chart
-                    chartType='LineChart'
-                    width='500px'
-                    height='500px'
+                    chartType={this.state.type}
+                    width={this.state.width}
+                    height={this.state.height}
                     data={this.state.data}
                     options={this.state.options}
                 />

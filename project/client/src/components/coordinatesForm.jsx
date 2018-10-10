@@ -19,25 +19,27 @@ class CoordinatesForm extends Component {
 
     render() { 
         return ( 
-            <form>
-                <input 
-                    name="longitude" 
-                    type="number"
-                    placeholder="Longitude"
-                    value={this.state.longitude}
-                    onChange={e => this.change(e)}
-                />
-                <br/>
-                <input 
-                    name="latitude" 
-                    type="number"
-                    placeholder="Latitude"
-                    value={this.state.latitude}
-                    onChange={e => this.change(e)}
-                />
-                <br/>
-                <button onClick={e => this.onSubmit(e)}>Submit</button>
-            </form>
+            <div>
+                <form>
+                    <input 
+                        name="longitude" 
+                        type="number"
+                        placeholder="Longitude"
+                        value={this.state.longitude}
+                        onChange={e => this.change(e)}
+                    />
+                    <br/>
+                    <input 
+                        name="latitude" 
+                        type="number"
+                        placeholder="Latitude"
+                        value={this.state.latitude}
+                        onChange={e => this.change(e)}
+                    />
+                    <br/>
+                    <button onClick={e => this.onSubmit(e)}>Submit</button>
+                </form>
+            </div>
          );
     };
 };
